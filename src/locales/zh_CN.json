@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "源代码、问题反馈与更新"
+    },
+    "testerButtonTitle": {
+        "message": "测试密码强度"
+    },
+    "testerViewLabel": {
+        "message": "密码强度测试器"
+    },
+    "testerHeading": {
+        "message": "测试密码"
+    },
+    "testerInputLabel": {
+        "message": "要测试的密码"
+    },
+    "testerPlaceholder": {
+        "message": "输入或粘贴密码..."
+    },
+    "testerToggleShow": {
+        "message": "显示密码"
+    },
+    "testerToggleHide": {
+        "message": "隐藏密码"
+    },
+    "checkMinLength": {
+        "message": "至少8个字符"
+    },
+    "warningRepeatedChars": {
+        "message": "避免连续重复字符"
     }
 }

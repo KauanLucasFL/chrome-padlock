@@ -18,6 +18,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */
+import { CHARSETS } from "./charsets";
+
 /**
  * Exact entropy accounting for passwords produced by `generatePassword`.
  *
@@ -106,4 +108,88 @@ export function classifyStrength(bits: number): StrengthLevel {
         if (bits < step.below) return step.level;
     }
     return 4;
+}
+
+/** Character classes detected in a user-provided password. */
+export interface PasswordComposition {
+    readonly hasLowercase: boolean;
+    readonly hasUppercase: boolean;
+    readonly hasDigits: boolean;
+    readonly hasSymbols: boolean;
+}
+
+/** Detailed evaluation of a user-provided password. */
+export interface PasswordEvaluation {
+    readonly length: number;
+    readonly composition: PasswordComposition;
+    readonly poolSize: number;
+    readonly rawEntropyBits: number;
+    readonly entropyBits: number;
+    readonly level: StrengthLevel;
+    readonly isRepetitive: boolean;
+}
+
+/**
+ * Evaluates the composition, entropy and strength of an arbitrary password string.
+ *
+ * Uses the exact `entropyBits` calculation over the detected character classes,
+ * applying an attenuation penalty when the character variety is excessively repetitive
+ * (e.g., repeated characters like "aaaa" or repeated sequences).
+ *
+ * @param password - The password to evaluate.
+ * @returns Comprehensive analysis of the password.
+ */
+export function evaluatePassword(password: string): PasswordEvaluation {
+    if (!password) {
+        return {
+            length: 0,
+            composition: {
+                hasLowercase: false,
+                hasUppercase: false,
+                hasDigits: false,
+                hasSymbols: false,
+            },
+            poolSize: 0,
+            rawEntropyBits: 0,
+            entropyBits: 0,
+            level: 0,
+            isRepetitive: false,
+        };
+    }
+
+    const hasLowercase = /[a-z]/.test(password);
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasDigits = /[0-9]/.test(password);
+    const hasSymbols = /[^a-zA-Z0-9]/.test(password);
+
+    const setSizes: number[] = [];
+    if (hasLowercase) setSizes.push(CHARSETS.lowercase.length);
+    if (hasUppercase) setSizes.push(CHARSETS.uppercase.length);
+    if (hasDigits) setSizes.push(CHARSETS.digits.length);
+    if (hasSymbols) setSizes.push(CHARSETS.symbols.length);
+
+    const poolSize = setSizes.reduce((sum, size) => sum + size, 0);
+    const rawEntropyBits = entropyBits(setSizes, password.length);
+
+    const uniqueCount = new Set(password).size;
+    const diversityRatio = uniqueCount / password.length;
+    const hasRuns = /(.)\1{2,}/.test(password);
+    const isRepetitive = password.length >= 4 && (diversityRatio <= 0.5 || hasRuns);
+
+    const entropy = isRepetitive ? rawEntropyBits * Math.max(0.1, diversityRatio) : rawEntropyBits;
+
+    return {
+        length: password.length,
+        composition: {
+            hasLowercase,
+            hasUppercase,
+            hasDigits,
+            hasSymbols,
+        },
+        poolSize,
+        rawEntropyBits,
+        entropyBits: entropy,
+        level: classifyStrength(entropy),
+        isRepetitive,
+    };
 }

@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "کد منبع، مشکلات و به‌روزرسانی‌ها"
+    },
+    "testerButtonTitle": {
+        "message": "بررسی قدرت گذرواژه"
+    },
+    "testerViewLabel": {
+        "message": "آزمون‌گر قدرت گذرواژه"
+    },
+    "testerHeading": {
+        "message": "آزمایش گذرواژه"
+    },
+    "testerInputLabel": {
+        "message": "گذرواژه برای بررسی"
+    },
+    "testerPlaceholder": {
+        "message": "گذرواژه‌ای بنویسید یا جای‌گذاری کنید..."
+    },
+    "testerToggleShow": {
+        "message": "نمایش گذرواژه"
+    },
+    "testerToggleHide": {
+        "message": "پنهان کردن گذرواژه"
+    },
+    "checkMinLength": {
+        "message": "حداقل ۸ نویسه"
+    },
+    "warningRepeatedChars": {
+        "message": "از نویسه‌های تکراری پرهيز کنید"
     }
 }

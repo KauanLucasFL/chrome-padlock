@@ -348,5 +348,41 @@
     "aboutRepositoryLabel": {
         "message": "Source code, issues and updates",
         "description": "Caption above the link to the GitHub repository."
+    },
+    "testerButtonTitle": {
+        "message": "Test password strength",
+        "description": "Tooltip and accessible name of the toolbar button that opens the password tester."
+    },
+    "testerViewLabel": {
+        "message": "Password strength tester",
+        "description": "Accessible name of the password strength tester view."
+    },
+    "testerHeading": {
+        "message": "Test Password",
+        "description": "Heading of the password tester view."
+    },
+    "testerInputLabel": {
+        "message": "Password to test",
+        "description": "Label of the password input in the tester view."
+    },
+    "testerPlaceholder": {
+        "message": "Type or paste a password...",
+        "description": "Placeholder of the password input in the tester view."
+    },
+    "testerToggleShow": {
+        "message": "Show password",
+        "description": "Tooltip and accessible name to reveal password text."
+    },
+    "testerToggleHide": {
+        "message": "Hide password",
+        "description": "Tooltip and accessible name to conceal password text."
+    },
+    "checkMinLength": {
+        "message": "At least 8 characters",
+        "description": "Checklist item requiring at least 8 characters."
+    },
+    "warningRepeatedChars": {
+        "message": "Avoid repetitive characters",
+        "description": "Warning shown when the password contains excessive repetitions."
     }
 }

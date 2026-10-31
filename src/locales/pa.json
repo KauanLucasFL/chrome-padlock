@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "ਸੋਰਸ ਕੋਡ, ਸਮੱਸਿਆਵਾਂ ਅਤੇ ਅੱਪਡੇਟ"
+    },
+    "testerButtonTitle": {
+        "message": "ਪਾਸਵਰਡ ਦੀ ਤਾਕਤ ਦੀ ਜਾਂਚ ਕਰੋ"
+    },
+    "testerViewLabel": {
+        "message": "ਪਾਸਵਰਡ ਤਾਕਤ ਟੈਸਟਰ"
+    },
+    "testerHeading": {
+        "message": "ਪਾਸਵਰਡ ਟੈਸਟ ਕਰੋ"
+    },
+    "testerInputLabel": {
+        "message": "ਜਾਂਚਣ ਲਈ ਪਾਸਵਰਡ"
+    },
+    "testerPlaceholder": {
+        "message": "ਪਾਸਵਰਡ ਲਿਖੋ ਜਾਂ ਪੇਸਟ ਕਰੋ..."
+    },
+    "testerToggleShow": {
+        "message": "ਪਾਸਵਰਡ ਦਿਖਾਓ"
+    },
+    "testerToggleHide": {
+        "message": "ਪਾਸਵਰਡ ਛੁਪਾਓ"
+    },
+    "checkMinLength": {
+        "message": "ਘੱਟੋ-ਘੱਟ 8 ਅੱਖਰ"
+    },
+    "warningRepeatedChars": {
+        "message": "ਦੁਹਰਾਉਣ ਵਾਲੇ ਅੱਖਰਾਂ ਤੋਂ ਬਚੋ"
     }
 }

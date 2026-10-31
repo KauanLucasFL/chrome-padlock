@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Quellcode, Probleme und Updates"
+    },
+    "testerButtonTitle": {
+        "message": "Passwortstärke testen"
+    },
+    "testerViewLabel": {
+        "message": "Passwortstärke-Tester"
+    },
+    "testerHeading": {
+        "message": "Passwort testen"
+    },
+    "testerInputLabel": {
+        "message": "Zu testendes Passwort"
+    },
+    "testerPlaceholder": {
+        "message": "Passwort eingeben oder einfügen..."
+    },
+    "testerToggleShow": {
+        "message": "Passwort anzeigen"
+    },
+    "testerToggleHide": {
+        "message": "Passwort ausblenden"
+    },
+    "checkMinLength": {
+        "message": "Mindestens 8 Zeichen"
+    },
+    "warningRepeatedChars": {
+        "message": "Wiederholende Zeichen vermeiden"
     }
 }

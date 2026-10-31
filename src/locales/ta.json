@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "மூலக் குறியீடு, சிக்கல்கள் மற்றும் புதுப்பிப்புகள்"
+    },
+    "testerButtonTitle": {
+        "message": "கடவுச்சொல் வலிமையைச் சோதிக்கவும்"
+    },
+    "testerViewLabel": {
+        "message": "கடவுச்சொல் வலிமை சோதனையாளர்"
+    },
+    "testerHeading": {
+        "message": "கடவுச்சொல்லைச் சோதிக்கவும்"
+    },
+    "testerInputLabel": {
+        "message": "சோதிக்க வேண்டிய கடவுச்சொல்"
+    },
+    "testerPlaceholder": {
+        "message": "கடவுச்சொல்லை உள்ளிடவும் அல்லது ஒட்டவும்..."
+    },
+    "testerToggleShow": {
+        "message": "கடவுச்சொல்லைக் காட்டு"
+    },
+    "testerToggleHide": {
+        "message": "கடவுச்சொல்லை மறை"
+    },
+    "checkMinLength": {
+        "message": "குறைந்தது 8 எழுத்துகள்"
+    },
+    "warningRepeatedChars": {
+        "message": "மீண்டும் மீண்டும் வரும் எழுத்துகளைத் தவிர்க்கவும்"
     }
 }

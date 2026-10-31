@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "소스 코드, 이슈 및 업데이트"
+    },
+    "testerButtonTitle": {
+        "message": "비밀번호 강도 확인"
+    },
+    "testerViewLabel": {
+        "message": "비밀번호 강도 검사기"
+    },
+    "testerHeading": {
+        "message": "비밀번호 테스트"
+    },
+    "testerInputLabel": {
+        "message": "테스트할 비밀번호"
+    },
+    "testerPlaceholder": {
+        "message": "비밀번호를 입력하거나 붙여넣으세요..."
+    },
+    "testerToggleShow": {
+        "message": "비밀번호 표시"
+    },
+    "testerToggleHide": {
+        "message": "비밀번호 숨기기"
+    },
+    "checkMinLength": {
+        "message": "8자 이상"
+    },
+    "warningRepeatedChars": {
+        "message": "반복되는 문자를 피하세요"
     }
 }

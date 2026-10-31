@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Lambar tushe, matsaloli da sabuntawa"
+    },
+    "testerButtonTitle": {
+        "message": "Gwada karfin kalmar sirri"
+    },
+    "testerViewLabel": {
+        "message": "Mai gwada karfin kalmar sirri"
+    },
+    "testerHeading": {
+        "message": "Gwada Kalmar Sirri"
+    },
+    "testerInputLabel": {
+        "message": "Kalmar sirri da za a gwada"
+    },
+    "testerPlaceholder": {
+        "message": "Rubuta ko liƙa kalmar sirri..."
+    },
+    "testerToggleShow": {
+        "message": "Nuna kalmar sirri"
+    },
+    "testerToggleHide": {
+        "message": "Ɓoye kalmar sirri"
+    },
+    "checkMinLength": {
+        "message": "Aƙalla haruffa 8"
+    },
+    "warningRepeatedChars": {
+        "message": "Guji maimaita haruffa"
     }
 }

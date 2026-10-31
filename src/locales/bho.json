@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "सोर्स कोड, समस्या आ अपडेट"
+    },
+    "testerButtonTitle": {
+        "message": "पासवर्ड के मजबूती जांचीं"
+    },
+    "testerViewLabel": {
+        "message": "पासवर्ड मजबूती परीक्षक"
+    },
+    "testerHeading": {
+        "message": "पासवर्ड जांचीं"
+    },
+    "testerInputLabel": {
+        "message": "जांचे खातिर पासवर्ड"
+    },
+    "testerPlaceholder": {
+        "message": "पासवर्ड लिखीं चाहे चिपकाईं..."
+    },
+    "testerToggleShow": {
+        "message": "पासवर्ड दिखाईं"
+    },
+    "testerToggleHide": {
+        "message": "पासवर्ड छुपाईं"
+    },
+    "checkMinLength": {
+        "message": "कम से कम 8 अक्षर"
+    },
+    "warningRepeatedChars": {
+        "message": "दोहरावल अक्षर से बचीं"
     }
 }

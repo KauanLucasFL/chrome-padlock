@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "سورس کوڈ، مسائل اور اپ ڈیٹس"
+    },
+    "testerButtonTitle": {
+        "message": "پاس ورڈ کی طاقت چیک کریں"
+    },
+    "testerViewLabel": {
+        "message": "پاس ورڈ کی طاقت کا ٹیسٹر"
+    },
+    "testerHeading": {
+        "message": "پاس ورڈ ٹیسٹ کریں"
+    },
+    "testerInputLabel": {
+        "message": "ٹیسٹ کے لیے پاس ورڈ"
+    },
+    "testerPlaceholder": {
+        "message": "پاس ورڈ ٹائپ کریں یا پیسٹ کریں..."
+    },
+    "testerToggleShow": {
+        "message": "پاس ورڈ دکھائیں"
+    },
+    "testerToggleHide": {
+        "message": "پاس ورڈ چھپائیں"
+    },
+    "checkMinLength": {
+        "message": "کم از کم 8 حروف"
+    },
+    "warningRepeatedChars": {
+        "message": "بار بار آنے والے حروف سے گریز کریں"
     }
 }

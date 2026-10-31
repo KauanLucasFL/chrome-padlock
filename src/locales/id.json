@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Kode sumber, masalah, dan pembaruan"
+    },
+    "testerButtonTitle": {
+        "message": "Uji kekuatan sandi"
+    },
+    "testerViewLabel": {
+        "message": "Penguji kekuatan kata sandi"
+    },
+    "testerHeading": {
+        "message": "Uji Kata Sandi"
+    },
+    "testerInputLabel": {
+        "message": "Kata sandi yang akan diuji"
+    },
+    "testerPlaceholder": {
+        "message": "Ketik atau tempel kata sandi..."
+    },
+    "testerToggleShow": {
+        "message": "Tampilkan kata sandi"
+    },
+    "testerToggleHide": {
+        "message": "Sembunyikan kata sandi"
+    },
+    "checkMinLength": {
+        "message": "Minimal 8 karakter"
+    },
+    "warningRepeatedChars": {
+        "message": "Hindari karakter berulang"
     }
 }

@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Mã nguồn, sự cố và bản cập nhật"
+    },
+    "testerButtonTitle": {
+        "message": "Kiểm tra độ mạnh mật khẩu"
+    },
+    "testerViewLabel": {
+        "message": "Trình kiểm tra độ mạnh mật khẩu"
+    },
+    "testerHeading": {
+        "message": "Kiểm tra mật khẩu"
+    },
+    "testerInputLabel": {
+        "message": "Mật khẩu cần kiểm tra"
+    },
+    "testerPlaceholder": {
+        "message": "Nhập hoặc dán mật khẩu..."
+    },
+    "testerToggleShow": {
+        "message": "Hiện mật khẩu"
+    },
+    "testerToggleHide": {
+        "message": "Ẩn mật khẩu"
+    },
+    "checkMinLength": {
+        "message": "Ít nhất 8 ký tự"
+    },
+    "warningRepeatedChars": {
+        "message": "Tránh các ký tự lặp lại"
     }
 }

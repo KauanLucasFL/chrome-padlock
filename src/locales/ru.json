@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Исходный код, проблемы и обновления"
+    },
+    "testerButtonTitle": {
+        "message": "Проверить надежность пароля"
+    },
+    "testerViewLabel": {
+        "message": "Проверка надежности пароля"
+    },
+    "testerHeading": {
+        "message": "Проверить пароль"
+    },
+    "testerInputLabel": {
+        "message": "Пароль для проверки"
+    },
+    "testerPlaceholder": {
+        "message": "Введите или вставьте пароль..."
+    },
+    "testerToggleShow": {
+        "message": "Показать пароль"
+    },
+    "testerToggleHide": {
+        "message": "Скрыть пароль"
+    },
+    "checkMinLength": {
+        "message": "Не менее 8 символов"
+    },
+    "warningRepeatedChars": {
+        "message": "Избегайте повторяющихся символов"
     }
 }

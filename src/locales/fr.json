@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Code source, tickets et mises à jour"
+    },
+    "testerButtonTitle": {
+        "message": "Tester la sécurité du mot de passe"
+    },
+    "testerViewLabel": {
+        "message": "Testeur de sécurité du mot de passe"
+    },
+    "testerHeading": {
+        "message": "Tester le mot de passe"
+    },
+    "testerInputLabel": {
+        "message": "Mot de passe à tester"
+    },
+    "testerPlaceholder": {
+        "message": "Tapez ou collez un mot de passe..."
+    },
+    "testerToggleShow": {
+        "message": "Afficher le mot de passe"
+    },
+    "testerToggleHide": {
+        "message": "Masquer le mot de passe"
+    },
+    "checkMinLength": {
+        "message": "Au moins 8 caractères"
+    },
+    "warningRepeatedChars": {
+        "message": "Évitez les caractères répétitifs"
     }
 }

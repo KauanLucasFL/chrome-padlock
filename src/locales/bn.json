@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "সোর্স কোড, সমস্যা ও আপডেট"
+    },
+    "testerButtonTitle": {
+        "message": "পাসওয়ার্ডের শক্তি পরীক্ষা করুন"
+    },
+    "testerViewLabel": {
+        "message": "পাসওয়ার্ড শক্তি পরীক্ষক"
+    },
+    "testerHeading": {
+        "message": "পাসওয়ার্ড পরীক্ষা"
+    },
+    "testerInputLabel": {
+        "message": "পরীক্ষার পাসওয়ার্ড"
+    },
+    "testerPlaceholder": {
+        "message": "পাসওয়ার্ড লিখুন বা পেস্ট করুন..."
+    },
+    "testerToggleShow": {
+        "message": "পাসওয়ার্ড দেখান"
+    },
+    "testerToggleHide": {
+        "message": "পাসওয়ার্ড লুকান"
+    },
+    "checkMinLength": {
+        "message": "অন্তত ৮টি অক্ষর"
+    },
+    "warningRepeatedChars": {
+        "message": "পুনরাবৃত্তিমূলক অক্ষর এড়িয়ে চলুন"
     }
 }

@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Kod źródłowy, zgłoszenia i aktualizacje"
+    },
+    "testerButtonTitle": {
+        "message": "Sprawdź siłę hasła"
+    },
+    "testerViewLabel": {
+        "message": "Tester siły hasła"
+    },
+    "testerHeading": {
+        "message": "Testuj hasło"
+    },
+    "testerInputLabel": {
+        "message": "Hasło do przetestowania"
+    },
+    "testerPlaceholder": {
+        "message": "Wpisz lub wklej hasło..."
+    },
+    "testerToggleShow": {
+        "message": "Pokaż hasło"
+    },
+    "testerToggleHide": {
+        "message": "Ukryj hasło"
+    },
+    "checkMinLength": {
+        "message": "Co najmniej 8 znaków"
+    },
+    "warningRepeatedChars": {
+        "message": "Unikaj powtarzających się znaków"
     }
 }

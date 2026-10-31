@@ -33,6 +33,22 @@
                 <h1>Padlock</h1>
                 <span class="tagline" data-i18n="tagline">Secure password generator</span>
                 <button
+                    id="tester-open"
+                    type="button"
+                    class="icon-button"
+                    title="Test password strength"
+                    aria-label="Test password strength"
+                    data-i18n-title="testerButtonTitle"
+                    data-i18n-aria-label="testerButtonTitle"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            fill-rule="evenodd"
+                            d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.13 2.12 4.24-4.24 1.41 1.41-5.65 5.66z"
+                        />
+                    </svg>
+                </button>
+                <button
                     id="settings-open"
                     type="button"
                     class="icon-button"
@@ -284,6 +300,93 @@
                 <p id="settings-status" class="status" role="status" aria-live="polite"></p>
             </section>
 
+
+            <section
+                id="tester-view"
+                class="card view"
+                aria-label="Password strength tester"
+                data-i18n-aria-label="testerViewLabel"
+                hidden
+            >
+                <div class="view-head">
+                    <button id="tester-back" type="button" class="primary" data-i18n="back">Back</button>
+                    <h2 data-i18n="testerHeading">Test Password</h2>
+                </div>
+                <div class="tester-body">
+                    <div class="field">
+                        <label for="tester-input" data-i18n="testerInputLabel">Password to test</label>
+                        <div class="tester-input-row">
+                            <input
+                                id="tester-input"
+                                type="password"
+                                autocomplete="off"
+                                spellcheck="false"
+                                placeholder="Type or paste a password..."
+                                data-i18n-placeholder="testerPlaceholder"
+                            />
+                            <button
+                                id="tester-toggle-mask"
+                                type="button"
+                                class="icon-button"
+                                title="Show password"
+                                aria-label="Show password"
+                                data-i18n-title="testerToggleShow"
+                                data-i18n-aria-label="testerToggleShow"
+                            >
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="strength">
+                        <div
+                            id="tester-meter"
+                            class="meter"
+                            data-level="0"
+                            role="meter"
+                            aria-label="Password strength"
+                            data-i18n-aria-label="strengthMeterLabel"
+                            aria-valuemin="0"
+                            aria-valuemax="4"
+                            aria-valuenow="0"
+                        >
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="strength-text">
+                            <strong id="tester-strength-label">–</strong>
+                            <span id="tester-entropy" class="muted"></span>
+                        </div>
+                    </div>
+
+                    <div class="tester-checklist">
+                        <div id="check-length" class="check-badge" data-valid="false">
+                            <span class="badge-icon">✕</span>
+                            <span data-i18n="checkMinLength">At least 8 characters</span>
+                        </div>
+                        <div id="check-lowercase" class="check-badge" data-valid="false">
+                            <span class="badge-icon">✕</span>
+                            <span data-i18n="lowercase">Lowercase</span>
+                        </div>
+                        <div id="check-uppercase" class="check-badge" data-valid="false">
+                            <span class="badge-icon">✕</span>
+                            <span data-i18n="uppercase">Uppercase</span>
+                        </div>
+                        <div id="check-digits" class="check-badge" data-valid="false">
+                            <span class="badge-icon">✕</span>
+                            <span data-i18n="digits">Digits</span>
+                        </div>
+                        <div id="check-symbols" class="check-badge" data-valid="false">
+                            <span class="badge-icon">✕</span>
+                            <span data-i18n="symbols">Symbols</span>
+                        </div>
+                    </div>
+
+                    <p id="tester-warning" class="status error" role="status" aria-live="polite" hidden data-i18n="warningRepeatedChars">Avoid repetitive characters</p>
+                </div>
+                <p id="tester-status" class="status" role="status" aria-live="polite"></p>
+            </section>
             <section
                 id="about-view"
                 class="card view"

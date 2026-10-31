@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "ソースコード、問題報告、更新情報"
+    },
+    "testerButtonTitle": {
+        "message": "パスワードの強度を確認"
+    },
+    "testerViewLabel": {
+        "message": "パスワード強度チェッカー"
+    },
+    "testerHeading": {
+        "message": "パスワードをテスト"
+    },
+    "testerInputLabel": {
+        "message": "テストするパスワード"
+    },
+    "testerPlaceholder": {
+        "message": "パスワードを入力または貼り付け..."
+    },
+    "testerToggleShow": {
+        "message": "パスワードを表示"
+    },
+    "testerToggleHide": {
+        "message": "パスワードを非表示"
+    },
+    "checkMinLength": {
+        "message": "8文字以上"
+    },
+    "warningRepeatedChars": {
+        "message": "繰り返しの文字を避けてください"
     }
 }

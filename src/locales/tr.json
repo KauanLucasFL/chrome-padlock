@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Kaynak kodu, sorunlar ve güncellemeler"
+    },
+    "testerButtonTitle": {
+        "message": "Şifre gücünü test et"
+    },
+    "testerViewLabel": {
+        "message": "Şifre gücü test aracı"
+    },
+    "testerHeading": {
+        "message": "Şifreyi Test Et"
+    },
+    "testerInputLabel": {
+        "message": "Test edilecek şifre"
+    },
+    "testerPlaceholder": {
+        "message": "Bir şifre yazın veya yapıştırın..."
+    },
+    "testerToggleShow": {
+        "message": "Şifreyi göster"
+    },
+    "testerToggleHide": {
+        "message": "Şifreyi gizle"
+    },
+    "checkMinLength": {
+        "message": "En az 8 karakter"
+    },
+    "warningRepeatedChars": {
+        "message": "Tekrarlayan karakterlerden kaçının"
     }
 }

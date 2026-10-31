@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "ಮೂಲ ಕೋಡ್, ಸಮಸ್ಯೆಗಳು ಮತ್ತು ನವೀಕರಣಗಳು"
+    },
+    "testerButtonTitle": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ಸಾಮರ್ಥ್ಯ ಪರೀಕ್ಷಿಸಿ"
+    },
+    "testerViewLabel": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ಸಾಮರ್ಥ್ಯ ಪರೀಕ್ಷಕ"
+    },
+    "testerHeading": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ಪರೀಕ್ಷಿಸಿ"
+    },
+    "testerInputLabel": {
+        "message": "ಪರೀಕ್ಷಿಸಲು ಪಾಸ್‌ವರ್ಡ್"
+    },
+    "testerPlaceholder": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ಟೈಪ್ ಮಾಡಿ ಅಥವಾ ಅಂಟಿಸಿ..."
+    },
+    "testerToggleShow": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"
+    },
+    "testerToggleHide": {
+        "message": "ಪಾಸ್‌ವರ್ಡ್ ಮರೆಮಾಡಿ"
+    },
+    "checkMinLength": {
+        "message": "ಕನಿಷ್ಠ 8 ಅಕ್ಷರಗಳು"
+    },
+    "warningRepeatedChars": {
+        "message": "ಪುನರಾವರ್ತಿತ ಅಕ್ಷರಗಳನ್ನು ತಪ್ಪಿಸಿ"
     }
 }

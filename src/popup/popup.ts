@@ -19,7 +19,7 @@
     limitations under the License.
 */
 import { CHARSETS } from "../core/charsets";
-import { classifyStrength } from "../core/entropy";
+import { classifyStrength, evaluatePassword } from "../core/entropy";
 import { analyze, generatePassword, GeneratorError, MAX_LENGTH, MIN_LENGTH } from "../core/generator";
 import { sha256Hex } from "../shared/hash";
 import { HISTORY_LIMIT, clearHistory, loadHistory, recordPassword } from "../shared/history";
@@ -57,7 +57,7 @@ const STRENGTH_MESSAGES = [
 ] as const satisfies readonly MessageKey[];
 
 /** The screens of the popup. Only one is visible at a time. */
-type View = "main" | "history" | "settings" | "about";
+type View = "main" | "history" | "settings" | "about" | "tester";
 
 /**
  * Finds an element by id.
@@ -112,6 +112,21 @@ const ui = {
     maskPasswords: el<HTMLInputElement>("mask-passwords"),
     aboutView: el<HTMLElement>("about-view"),
     aboutBack: el<HTMLButtonElement>("about-back"),
+    testerOpen: el<HTMLButtonElement>("tester-open"),
+    testerView: el<HTMLElement>("tester-view"),
+    testerBack: el<HTMLButtonElement>("tester-back"),
+    testerStatus: el<HTMLElement>("tester-status"),
+    testerInput: el<HTMLInputElement>("tester-input"),
+    testerToggleMask: el<HTMLButtonElement>("tester-toggle-mask"),
+    testerMeter: el<HTMLElement>("tester-meter"),
+    testerStrengthLabel: el<HTMLElement>("tester-strength-label"),
+    testerEntropy: el<HTMLElement>("tester-entropy"),
+    testerWarning: el<HTMLElement>("tester-warning"),
+    checkLength: el<HTMLElement>("check-length"),
+    checkLowercase: el<HTMLElement>("check-lowercase"),
+    checkUppercase: el<HTMLElement>("check-uppercase"),
+    checkDigits: el<HTMLElement>("check-digits"),
+    checkSymbols: el<HTMLElement>("check-symbols"),
 };
 
 /** The view each screen lives in, and the status line it shows messages on. */
@@ -120,6 +135,7 @@ const VIEWS: Record<View, { element: HTMLElement; status: HTMLElement }> = {
     history: { element: ui.historyView, status: ui.historyStatus },
     settings: { element: ui.settingsView, status: ui.settingsStatus },
     about: { element: ui.aboutView, status: ui.status },
+    tester: { element: ui.testerView, status: ui.testerStatus },
 };
 
 let settings: Settings;
@@ -274,6 +290,7 @@ function refreshLanguage(): void {
     renderStrength();
     if (current === null) regenerate();
     if (currentView === "history") void renderHistory();
+    renderTester();
 }
 
 /** Fills the language selector with every supported language, each named in its own language. */
@@ -375,12 +392,77 @@ async function renderHistory(): Promise<void> {
  *
  * @param view - The screen to show.
  */
+
+const EYE_OPEN =
+    "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z";
+const EYE_CLOSED =
+    "M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.44-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z";
+
+let testerMasked = true;
+
+/** Toggles between masking and showing the password in the tester input. */
+function toggleTesterMask(): void {
+    testerMasked = !testerMasked;
+    ui.testerInput.type = testerMasked ? "password" : "text";
+    const labelKey = testerMasked ? "testerToggleShow" : "testerToggleHide";
+    ui.testerToggleMask.title = t(labelKey);
+    ui.testerToggleMask.setAttribute("aria-label", t(labelKey));
+    const path = ui.testerToggleMask.querySelector("path");
+    if (path) path.setAttribute("d", testerMasked ? EYE_OPEN : EYE_CLOSED);
+}
+
+/** Updates a checklist item badge with a valid or invalid state and icon. */
+function updateBadge(badge: HTMLElement, valid: boolean): void {
+    badge.dataset.valid = String(valid);
+    const icon = badge.querySelector(".badge-icon");
+    if (icon) icon.textContent = valid ? "✓" : "✕";
+}
+
+/** Evaluates the password currently entered in the tester and refreshes its display. */
+function renderTester(): void {
+    const password = ui.testerInput.value;
+    const labelKey = testerMasked ? "testerToggleShow" : "testerToggleHide";
+    ui.testerToggleMask.title = t(labelKey);
+    ui.testerToggleMask.setAttribute("aria-label", t(labelKey));
+
+    if (password.length === 0) {
+        ui.testerMeter.dataset.level = "0";
+        ui.testerMeter.setAttribute("aria-valuenow", "0");
+        ui.testerStrengthLabel.textContent = "–";
+        ui.testerEntropy.textContent = "";
+        ui.testerWarning.hidden = true;
+        updateBadge(ui.checkLength, false);
+        updateBadge(ui.checkLowercase, false);
+        updateBadge(ui.checkUppercase, false);
+        updateBadge(ui.checkDigits, false);
+        updateBadge(ui.checkSymbols, false);
+        return;
+    }
+
+    const evaluation = evaluatePassword(password);
+    ui.testerMeter.dataset.level = String(evaluation.level);
+    ui.testerMeter.setAttribute("aria-valuenow", String(evaluation.level));
+    ui.testerStrengthLabel.textContent = t(STRENGTH_MESSAGES[evaluation.level]);
+    ui.testerEntropy.textContent = t("entropyBits", String(Math.floor(evaluation.entropyBits)));
+    ui.testerWarning.hidden = !evaluation.isRepetitive;
+
+    updateBadge(ui.checkLength, evaluation.length >= 8);
+    updateBadge(ui.checkLowercase, evaluation.composition.hasLowercase);
+    updateBadge(ui.checkUppercase, evaluation.composition.hasUppercase);
+    updateBadge(ui.checkDigits, evaluation.composition.hasDigits);
+    updateBadge(ui.checkSymbols, evaluation.composition.hasSymbols);
+}
+
 function showView(view: View): void {
     currentView = view;
     for (const [name, { element }] of Object.entries(VIEWS)) element.hidden = name !== view;
     activeStatus = VIEWS[view].status;
     setStatus("");
     if (view === "history") void renderHistory();
+    if (view === "tester") {
+        renderTester();
+        ui.testerInput.focus();
+    }
 }
 
 /** Deletes the whole history and refreshes the list. */
@@ -559,13 +641,16 @@ function bindEvents(): void {
     ui.settingsOpen.addEventListener("click", () => showView("settings"));
     ui.aboutOpen.addEventListener("click", () => showView("about"));
     ui.historyOpen.addEventListener("click", () => showView("history"));
-    for (const back of [ui.historyBack, ui.settingsBack, ui.aboutBack]) {
+    ui.testerOpen.addEventListener("click", () => showView("tester"));
+    for (const back of [ui.historyBack, ui.settingsBack, ui.aboutBack, ui.testerBack]) {
         back.addEventListener("click", () => showView("main"));
     }
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && currentView !== "main") showView("main");
     });
     ui.historyClear.addEventListener("click", () => void onClearHistory());
+    ui.testerInput.addEventListener("input", renderTester);
+    ui.testerToggleMask.addEventListener("click", toggleTesterMask);
 
     ui.regenerate.addEventListener("click", () => {
         regenerate();

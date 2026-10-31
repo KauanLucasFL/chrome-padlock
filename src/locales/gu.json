@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "સોર્સ કોડ, સમસ્યાઓ અને અપડેટ્સ"
+    },
+    "testerButtonTitle": {
+        "message": "પાસવર્ડની મજબૂતાઈ તપાસો"
+    },
+    "testerViewLabel": {
+        "message": "પાસવર્ડ મજબૂતાઈ પરીક્ષક"
+    },
+    "testerHeading": {
+        "message": "પાસવર્ડ તપાસો"
+    },
+    "testerInputLabel": {
+        "message": "ચકાસવા માટે પાસવર્ડ"
+    },
+    "testerPlaceholder": {
+        "message": "પાસવર્ડ લખો અથવા પેસ્ટ કરો..."
+    },
+    "testerToggleShow": {
+        "message": "પાસવર્ડ બતાવો"
+    },
+    "testerToggleHide": {
+        "message": "પાસવર્ડ છુપાવો"
+    },
+    "checkMinLength": {
+        "message": "ઓછામાં ઓછા 8 અક્ષરો"
+    },
+    "warningRepeatedChars": {
+        "message": "પુનરાવર્તિત અક્ષરો ટાળો"
     }
 }

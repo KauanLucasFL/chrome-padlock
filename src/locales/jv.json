@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Kode sumber, masalah, lan nganyari"
+    },
+    "testerButtonTitle": {
+        "message": "Uji kekuwatan tembung sandhi"
+    },
+    "testerViewLabel": {
+        "message": "Panguji kekuwatan tembung sandhi"
+    },
+    "testerHeading": {
+        "message": "Uji Tembung Sandhi"
+    },
+    "testerInputLabel": {
+        "message": "Tembung sandhi sing arep diuji"
+    },
+    "testerPlaceholder": {
+        "message": "Ketik utawa tempel tembung sandhi..."
+    },
+    "testerToggleShow": {
+        "message": "Tuduhake tembung sandhi"
+    },
+    "testerToggleHide": {
+        "message": "Singidake tembung sandhi"
+    },
+    "checkMinLength": {
+        "message": "Paling sithik 8 aksara"
+    },
+    "warningRepeatedChars": {
+        "message": "Aja mbaleni aksara"
     }
 }

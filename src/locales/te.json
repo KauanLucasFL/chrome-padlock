@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "సోర్స్ కోడ్, సమస్యలు మరియు అప్‌డేట్‌లు"
+    },
+    "testerButtonTitle": {
+        "message": "పాస్‌వర్డ్ బలాన్ని పరీక్షించండి"
+    },
+    "testerViewLabel": {
+        "message": "పాస్‌వర్డ్ బలం టెస్టర్"
+    },
+    "testerHeading": {
+        "message": "పాస్‌వర్డ్‌ను పరీక్షించండి"
+    },
+    "testerInputLabel": {
+        "message": "పరీక్షించాల్సిన పాస్‌వర్డ్"
+    },
+    "testerPlaceholder": {
+        "message": "పాస్‌వర్డ్ టైప్ చేయండి లేదా అతికించండి..."
+    },
+    "testerToggleShow": {
+        "message": "పాస్‌వర్డ్‌ను చూపించు"
+    },
+    "testerToggleHide": {
+        "message": "పాస్‌వర్డ్‌ను దాచు"
+    },
+    "checkMinLength": {
+        "message": "కనీసం 8 అక్షరాలు"
+    },
+    "warningRepeatedChars": {
+        "message": "పునరావృత అక్షరాలను నివారించండి"
     }
 }

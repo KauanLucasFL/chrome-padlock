@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Codice sorgente, segnalazioni e aggiornamenti"
+    },
+    "testerButtonTitle": {
+        "message": "Verifica efficacia password"
+    },
+    "testerViewLabel": {
+        "message": "Strumento di verifica password"
+    },
+    "testerHeading": {
+        "message": "Verifica password"
+    },
+    "testerInputLabel": {
+        "message": "Password da verificare"
+    },
+    "testerPlaceholder": {
+        "message": "Digita o incolla una password..."
+    },
+    "testerToggleShow": {
+        "message": "Mostra password"
+    },
+    "testerToggleHide": {
+        "message": "Nascondi password"
+    },
+    "checkMinLength": {
+        "message": "Almeno 8 caratteri"
+    },
+    "warningRepeatedChars": {
+        "message": "Evita caratteri ripetitivi"
     }
 }

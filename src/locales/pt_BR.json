@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Código-fonte, problemas e atualizações"
+    },
+    "testerButtonTitle": {
+        "message": "Testar força da senha"
+    },
+    "testerViewLabel": {
+        "message": "Testador de força de senha"
+    },
+    "testerHeading": {
+        "message": "Testar Senha"
+    },
+    "testerInputLabel": {
+        "message": "Senha para testar"
+    },
+    "testerPlaceholder": {
+        "message": "Digite ou cole uma senha..."
+    },
+    "testerToggleShow": {
+        "message": "Mostrar senha"
+    },
+    "testerToggleHide": {
+        "message": "Ocultar senha"
+    },
+    "checkMinLength": {
+        "message": "Pelo menos 8 caracteres"
+    },
+    "warningRepeatedChars": {
+        "message": "Evite caracteres repetidos"
     }
 }

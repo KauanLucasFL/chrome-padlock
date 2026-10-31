@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Código fuente, incidencias y actualizaciones"
+    },
+    "testerButtonTitle": {
+        "message": "Probar seguridad de la contraseña"
+    },
+    "testerViewLabel": {
+        "message": "Comprobador de seguridad de contraseñas"
+    },
+    "testerHeading": {
+        "message": "Probar contraseña"
+    },
+    "testerInputLabel": {
+        "message": "Contraseña a probar"
+    },
+    "testerPlaceholder": {
+        "message": "Escribe o pega una contraseña..."
+    },
+    "testerToggleShow": {
+        "message": "Mostrar contraseña"
+    },
+    "testerToggleHide": {
+        "message": "Ocultar contraseña"
+    },
+    "checkMinLength": {
+        "message": "Al menos 8 caracteres"
+    },
+    "warningRepeatedChars": {
+        "message": "Evita caracteres repetitivos"
     }
 }

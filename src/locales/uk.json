@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "Вихідний код, проблеми й оновлення"
+    },
+    "testerButtonTitle": {
+        "message": "Перевірити надійність пароля"
+    },
+    "testerViewLabel": {
+        "message": "Тестер надійності пароля"
+    },
+    "testerHeading": {
+        "message": "Перевірити пароль"
+    },
+    "testerInputLabel": {
+        "message": "Пароль для перевірки"
+    },
+    "testerPlaceholder": {
+        "message": "Введіть або вставте пароль..."
+    },
+    "testerToggleShow": {
+        "message": "Показати пароль"
+    },
+    "testerToggleHide": {
+        "message": "Приховати пароль"
+    },
+    "checkMinLength": {
+        "message": "Щонайменше 8 символів"
+    },
+    "warningRepeatedChars": {
+        "message": "Уникайте повторюваних символів"
     }
 }

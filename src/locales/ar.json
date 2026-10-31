@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "الشيفرة المصدرية والمشكلات والتحديثات"
+    },
+    "testerButtonTitle": {
+        "message": "فحص قوة كلمة المرور"
+    },
+    "testerViewLabel": {
+        "message": "أداة اختبار قوة كلمة المرور"
+    },
+    "testerHeading": {
+        "message": "اختبار كلمة المرور"
+    },
+    "testerInputLabel": {
+        "message": "كلمة المرور للاختبار"
+    },
+    "testerPlaceholder": {
+        "message": "اكتب أو الصق كلمة مرور..."
+    },
+    "testerToggleShow": {
+        "message": "إظهار كلمة المرور"
+    },
+    "testerToggleHide": {
+        "message": "إخفاء كلمة المرور"
+    },
+    "checkMinLength": {
+        "message": "8 أحرف على الأقل"
+    },
+    "warningRepeatedChars": {
+        "message": "تجنب تكرار الأحرف"
     }
 }

@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "സോഴ്സ് കോഡ്, പ്രശ്നങ്ങൾ, അപ്‌ഡേറ്റുകൾ"
+    },
+    "testerButtonTitle": {
+        "message": "പാസ്‌വേഡ് കരുത്ത് പരിശോധിക്കുക"
+    },
+    "testerViewLabel": {
+        "message": "പാസ്‌വേഡ് കരുത്ത് ടെസ്റ്റർ"
+    },
+    "testerHeading": {
+        "message": "പാസ്‌വേഡ് പരിശോധിക്കുക"
+    },
+    "testerInputLabel": {
+        "message": "പരിശോധിക്കാനുള്ള പാസ്‌വേഡ്"
+    },
+    "testerPlaceholder": {
+        "message": "പാസ്‌വേഡ് ടൈപ്പ് ചെയ്യുക അല്ലെങ്കിൽ ഒട്ടിക്കുക..."
+    },
+    "testerToggleShow": {
+        "message": "പാസ്‌വേഡ് കാണിക്കുക"
+    },
+    "testerToggleHide": {
+        "message": "പാസ്‌വേഡ് മറയ്ക്കുക"
+    },
+    "checkMinLength": {
+        "message": "കുറഞ്ഞത് 8 അക്ഷരങ്ങൾ"
+    },
+    "warningRepeatedChars": {
+        "message": "ആവർത്തിച്ചുള്ള അക്ഷരങ്ങൾ ഒഴിവാക്കുക"
     }
 }

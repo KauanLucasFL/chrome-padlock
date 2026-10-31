@@ -19,7 +19,7 @@
     limitations under the License.
 */
 import { describe, expect, it } from "vitest";
-import { classifyStrength, countValidStrings, entropyBits, log2BigInt } from "../src/core/entropy";
+import { classifyStrength, countValidStrings, entropyBits, evaluatePassword, log2BigInt } from "../src/core/entropy";
 
 /**
  * Counts, by enumerating every string, those that use every set at least once.
@@ -109,5 +109,38 @@ describe("classifyStrength", () => {
     [128, 4],
   ])("rates %i bits as level %i", (bits, level) => {
     expect(classifyStrength(bits)).toBe(level);
+  });
+});
+
+describe("evaluatePassword", () => {
+  it("returns zero entropy for an empty password", () => {
+    const result = evaluatePassword("");
+    expect(result.length).toBe(0);
+    expect(result.entropyBits).toBe(0);
+    expect(result.level).toBe(0);
+    expect(result.isRepetitive).toBe(false);
+  });
+
+  it("detects character classes and pool sizes correctly", () => {
+    const result = evaluatePassword("aB3!");
+    expect(result.composition.hasLowercase).toBe(true);
+    expect(result.composition.hasUppercase).toBe(true);
+    expect(result.composition.hasDigits).toBe(true);
+    expect(result.composition.hasSymbols).toBe(true);
+    expect(result.poolSize).toBe(26 + 26 + 10 + 27);
+  });
+
+  it("penalizes repetitive single-character sequences", () => {
+    const repetitive = evaluatePassword("aaaaaaaaaaaaaaaa");
+    expect(repetitive.isRepetitive).toBe(true);
+    expect(repetitive.entropyBits).toBeLessThan(repetitive.rawEntropyBits);
+    expect(repetitive.level).toBe(0);
+  });
+
+  it("recognizes high entropy non-repetitive passwords", () => {
+    const strong = evaluatePassword("P@ssw0rd!2026#Xy");
+    expect(strong.isRepetitive).toBe(false);
+    expect(strong.entropyBits).toBeGreaterThanOrEqual(80);
+    expect(strong.level).toBeGreaterThanOrEqual(3);
   });
 });

@@ -634,3 +634,74 @@ h2 {
     direction: ltr;
     unicode-bidi: isolate;
 }
+
+/*
+ * Password tester view
+ */
+.tester-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 6px 0;
+}
+
+.tester-input-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tester-input-row input {
+    flex: 1;
+    min-width: 0;
+    height: 38px;
+    padding: 8px 12px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font:
+        600 14px ui-monospace,
+        "Cascadia Mono",
+        Consolas,
+        monospace;
+}
+
+.tester-input-row input:focus {
+    border-color: var(--accent);
+}
+
+.tester-checklist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.check-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    transition: all 0.15s ease;
+}
+
+.check-badge[data-valid="true"] {
+    color: var(--level-4);
+    border-color: var(--level-4);
+    background: rgba(15, 138, 79, 0.08);
+}
+
+:root[data-theme="dark"] .check-badge[data-valid="true"] {
+    background: rgba(52, 209, 127, 0.12);
+}
+
+.check-badge .badge-icon {
+    font-weight: 700;
+}

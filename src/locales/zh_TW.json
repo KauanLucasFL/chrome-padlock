@@ -272,5 +272,32 @@
     },
     "aboutRepositoryLabel": {
         "message": "原始碼、問題回報與更新"
+    },
+    "testerButtonTitle": {
+        "message": "測試密碼強度"
+    },
+    "testerViewLabel": {
+        "message": "密碼強度測試器"
+    },
+    "testerHeading": {
+        "message": "測試密碼"
+    },
+    "testerInputLabel": {
+        "message": "要測試的密碼"
+    },
+    "testerPlaceholder": {
+        "message": "輸入或貼上密碼..."
+    },
+    "testerToggleShow": {
+        "message": "顯示密碼"
+    },
+    "testerToggleHide": {
+        "message": "隱藏密碼"
+    },
+    "checkMinLength": {
+        "message": "至少8個字元"
+    },
+    "warningRepeatedChars": {
+        "message": "避免連續重複字元"
     }
 }
